@@ -1,8 +1,14 @@
-import React from "react";
+import React, { useContext } from "react";
+import { MyContext } from "../context/Context";
 
 const Header = () => {
+  const { state, dispatch } = useContext(MyContext);
+
   return (
-    <div className="w-full h-[120px] sm:h-[100px] flex justify-center bg-white top-0 left-0 fixed z-50">
+    <div
+      className="w-full h-[120px] sm:h-[100px] flex justify-center top-0 left-0 fixed z-50"
+      style={{ backgroundColor: state.bgColor, color: state.textColor }}
+    >
       <div className="w-full md:w-5/6 lg:w-4/6 xl:w-3/6 h-full flex sm:flex-row flex-col items-center sm:justify-between justify-evenly">
         <div className="w-3/6 sm:w-2/6 sm:h-full h-1/2 flex flex-col items-center justify-center ">
           <p className="text-l font-bold tracking-widest">ALLAN JOHNSON</p>
@@ -15,7 +21,11 @@ const Header = () => {
           <p>Contact</p>
           <p>Products</p>
           <p>Comments</p>
-          <i class="fa-regular fa-user p-2  border-2 border-customYellow rounded-full cursor-pointer"></i>
+
+          <i
+            className="fa-solid fa-circle-half-stroke cursor-pointer"
+            onClick={() => dispatch({ type: !state.mode })}
+          ></i>
         </div>
       </div>
     </div>

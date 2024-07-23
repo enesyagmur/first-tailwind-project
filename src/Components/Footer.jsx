@@ -6,17 +6,17 @@ const Footer = () => {
       <div className="lg:w-[1000px] h-full flex lg:flex-row flex-col-reverse items-center justify-between">
         <div className="w-full h-3/6 lg:w-2/6 lg:h-full flex flex-col items-center lg:items-start justify-around ">
           <p className="font-bold text-xl uppercase">Contact</p>
-          <p className="w-1/2">
+          <p className="w-1/2 bg-primary">
             500 Terry Francine Street, San Francisco, CA 94158
           </p>
           <p>Tel: 123 456 7890 </p>
           <p>Fax: 123-456-7890 </p>
           <p>info@mysite.com </p>
           <div className=" w-1/2  flex items-center justify-evenly ">
-            <i class="fa-brands fa-facebook"></i>
-            <i class="fa-brands fa-square-x-twitter"></i>
-            <i class="fa-brands fa-square-instagram"></i>
-            <i class="fa-brands fa-youtube"></i>
+            <i className="fa-brands fa-facebook"></i>
+            <i className="fa-brands fa-square-x-twitter"></i>
+            <i className="fa-brands fa-square-instagram"></i>
+            <i className="fa-brands fa-youtube"></i>
           </div>
           <p className="w-full lg:w-1/2">
             © 2035 by Personal Life Coach. Powered and secured by Wix

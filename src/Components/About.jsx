@@ -1,14 +1,20 @@
-import React from "react";
+import React, { useContext } from "react";
 import pp from "../Assets/pp2.jpg";
 import useIntersectionObserver from "../Hooks/useIntersectionObserver";
+import { MyContext } from "../context/Context";
 
 const About = () => {
+  const { state } = useContext(MyContext);
+
   const [ref, isIntersecting] = useIntersectionObserver({
     threshold: 0.1,
   });
 
   return (
-    <div className="w-full xl:h-[650px] h-[1200px] flex xl:flex-row flex-col items-center">
+    <div
+      className="w-full xl:h-[650px] h-[1200px] flex xl:flex-row flex-col items-center"
+      style={{ backgroundColor: state.bgColor, color: state.textColor }}
+    >
       <div
         ref={ref}
         className={`w-full xl:w-1/2 h-1/2 xl:h-full flex flex-col justify-center xl:pr-10 ${
